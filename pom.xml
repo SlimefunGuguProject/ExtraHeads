@@ -68,6 +68,10 @@
                             <pattern>org.bstats</pattern>
                             <shadedPattern>io.github.thebusybiscuit.extraheads.bstats</shadedPattern>
                         </relocation>
+                        <relocation>
+                            <pattern>net.guizhanss.minecraft.chineselib</pattern>
+                            <shadedPattern>io.github.thebusybiscuit.extraheads.chineselib</shadedPattern>
+                        </relocation>
                     </relocations>
 
                     <!-- Exclude unneeded metadata files from shaded dependencies -->
@@ -97,14 +101,14 @@
         <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot-api</artifactId>
-            <version>1.16.5-R0.1-SNAPSHOT</version>
+            <version>1.17.1-R0.1-SNAPSHOT</version>
             <scope>provided</scope>
         </dependency>
 
         <dependency>
             <groupId>com.github.slimefun</groupId>
             <artifactId>Slimefun4</artifactId>
-            <version>RC-27</version>
+            <version>RC-28</version>
             <scope>provided</scope>
             <exclusions>
                 <exclusion>
@@ -118,6 +122,13 @@
             <groupId>org.bstats</groupId>
             <artifactId>bstats-bukkit</artifactId>
             <version>2.2.1</version>
+            <scope>compile</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.ybw0014</groupId>
+            <artifactId>ChineseLib</artifactId>
+            <version>0.2.3</version>
             <scope>compile</scope>
         </dependency>
     </dependencies>

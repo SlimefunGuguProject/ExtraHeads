@@ -10,9 +10,8 @@ import io.github.thebusybiscuit.slimefun4.libraries.dough.config.Config;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.skins.PlayerHead;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.skins.PlayerSkin;
-import io.github.thebusybiscuit.slimefun4.libraries.dough.updater.GitHubBuildsUpdater;
-import io.github.thebusybiscuit.slimefun4.utils.ChatUtils;
-import net.guizhanss.minecraft.chineselib.minecraft.entity.EntityTypes;
+import net.guizhanss.guizhanlib.minecraft.helper.entity.EntityTypeHelper;
+import net.guizhanss.guizhanlib.updater.GuizhanBuildsUpdater;
 import org.bstats.bukkit.Metrics;
 import org.bukkit.Material;
 import org.bukkit.NamespacedKey;
@@ -44,7 +43,7 @@ public class ExtraHeads extends JavaPlugin implements SlimefunAddon {
         new Metrics(this, 5650);
 
         if (cfg.getBoolean("options.auto-update") && getDescription().getVersion().startsWith("DEV - ")) {
-            new GitHubBuildsUpdater(this, getFile(), "ybw0014/ExtraHeads-CN/master").start();
+            new GuizhanBuildsUpdater(this, getFile(), "ybw0014", "ExtraHeads-CN", "master", false).start();
         }
 
         itemGroup = new ItemGroup(new NamespacedKey(this, "heads"), new CustomItemStack(PlayerHead.getItemStack(PlayerSkin.fromHashCode("5f1379a82290d7abe1efaabbc70710ff2ec02dd34ade386bc00c930c461cf932")), "&7额外头颅", "", "&a> 单击打开"), 1);
@@ -118,7 +117,7 @@ public class ExtraHeads extends JavaPlugin implements SlimefunAddon {
 
     private void registerHead(EntityType type, String texture) {
         try {
-            String entityName = EntityTypes.fromEntityType(type).toString();
+            String entityName = EntityTypeHelper.getName(type);
             double chance = cfg.getOrSetDefault("chances." + type, 5.0);
             SlimefunItemStack item = new SlimefunItemStack(type + "_HEAD", texture, "&r" + entityName + "头");
             new MobHead(itemGroup, item, recipeType, new CustomItemStack(item, "&r击杀" + entityName, "&7几率: &e" + chance + "%")).register(this, () -> mobs.put(type, item));

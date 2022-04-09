@@ -120,7 +120,7 @@ public class ExtraHeads extends JavaPlugin implements SlimefunAddon {
         try {
             String entityName = EntityTypeHelper.getName(type);
             double chance = cfg.getOrSetDefault("chances." + type, 5.0);
-            SlimefunItemStack item = new SlimefunItemStack(type + "_HEAD", texture, "&r" + entityName + "头");
+            SlimefunItemStack item = new SlimefunItemStack(type + "_HEAD", texture, "&e" + entityName + "头颅");
             new MobHead(itemGroup, item, recipeType, new CustomItemStack(item, "&r击杀" + entityName, "&7几率: &e" + chance + "%")).register(this, () -> mobs.put(type, item));
         }
         catch (Exception x) {

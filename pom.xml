@@ -108,7 +108,7 @@
         <dependency>
             <groupId>com.github.slimefun</groupId>
             <artifactId>Slimefun4</artifactId>
-            <version>RC-31</version>
+            <version>08b7d03</version>
             <scope>provided</scope>
             <exclusions>
                 <exclusion>

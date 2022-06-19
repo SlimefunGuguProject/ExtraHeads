@@ -101,14 +101,14 @@
         <dependency>
             <groupId>org.spigotmc</groupId>
             <artifactId>spigot-api</artifactId>
-            <version>1.17.1-R0.1-SNAPSHOT</version>
+            <version>1.19</version>
             <scope>provided</scope>
         </dependency>
 
         <dependency>
             <groupId>com.github.slimefun</groupId>
             <artifactId>Slimefun4</artifactId>
-            <version>RC-28</version>
+            <version>RC-31</version>
             <scope>provided</scope>
             <exclusions>
                 <exclusion>

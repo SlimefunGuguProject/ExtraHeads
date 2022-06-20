@@ -28,7 +28,7 @@ body:
           required: true
         - label: 你没有安装`CS-CoreLib`
           required: true
-        - label: 你已经寻找过[已知问题列表](https://github.com/SlimefunGuguProject/FoxyMachines/issues)，且没有找到相同的问题
+        - label: 你已经寻找过[已知问题列表](https://github.com/SlimefunGuguProject/ExtraHeads/issues)，且没有找到相同的问题
           required: true
 
   - type: textarea

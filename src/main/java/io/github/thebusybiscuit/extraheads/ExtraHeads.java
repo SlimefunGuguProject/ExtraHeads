@@ -115,6 +115,11 @@ public class ExtraHeads extends JavaPlugin implements SlimefunAddon {
             registerHead(EntityType.TADPOLE, "987035f5352334c2cba6ac4c65c2b9059739d6d0e839c1dd98d75d2e77957847");
             registerHead(EntityType.WARDEN, "c6f74361fb00490a0a98eeb814544ecdd775cb55633dbb114e60d27004cb1020");
         }
+
+        if (Slimefun.getMinecraftVersion().isAtLeast(MinecraftVersion.MINECRAFT_1_20)) {
+            registerHead(EntityType.CAMEL, "74b8a333dfa92e7e5a95ad4ae2d84b1bafa33dc28c054925277f60e79dafc8c4");
+            registerHead(EntityType.SNIFFER, "3d6c9f43510cb90d24493e07b7cf8ca9f54132d09a257f20b7048022e3b1b707");
+        }
         
         cfg.save();
 

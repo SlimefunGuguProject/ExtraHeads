@@ -20,9 +20,10 @@ import io.github.thebusybiscuit.slimefun4.api.recipes.RecipeType;
 import io.github.thebusybiscuit.slimefun4.implementation.Slimefun;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.config.Config;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
-import io.github.thebusybiscuit.slimefun4.libraries.dough.updater.GitHubBuildsUpdater;
-import io.github.thebusybiscuit.slimefun4.utils.ChatUtils;
 import io.github.thebusybiscuit.slimefun4.utils.SlimefunUtils;
+
+import net.guizhanss.guizhanlib.minecraft.helper.entity.EntityTypeHelper;
+import net.guizhanss.guizhanlibplugin.updater.GuizhanUpdater;
 
 public class ExtraHeads extends JavaPlugin implements SlimefunAddon {
 
@@ -36,21 +37,28 @@ public class ExtraHeads extends JavaPlugin implements SlimefunAddon {
 
     @Override
     public void onEnable() {
+        if (!getServer().getPluginManager().isPluginEnabled("GuizhanLibPlugin")) {
+            getLogger().log(Level.SEVERE, "本插件需要 鬼斩前置库插件(GuizhanLibPlugin) 才能运行!");
+            getLogger().log(Level.SEVERE, "从此处下载: https://50L.cc/gzlib");
+            getServer().getPluginManager().disablePlugin(this);
+            return;
+        }
+
         cfg = new Config(this);
         logger = getLogger();
 
         // Setting up bStats
         new Metrics(this, 5650);
 
-        if (cfg.getBoolean("options.auto-update") && getDescription().getVersion().startsWith("DEV - ")) {
-            new GitHubBuildsUpdater(this, getFile(), "TheBusyBiscuit/ExtraHeads/master").start();
+        if (cfg.getBoolean("options.auto-update") && getDescription().getVersion().startsWith("Build")) {
+            GuizhanUpdater.start(this, getFile(), "SlimefunGuguProject", "ExtraHeads", "master");
         }
 
         itemGroup = new ItemGroup(
             new NamespacedKey(this, "heads"),
             new CustomItemStack(
                 SlimefunUtils.getCustomHead("5f1379a82290d7abe1efaabbc70710ff2ec02dd34ade386bc00c930c461cf932"),
-                "&7Extra Heads"
+                "&7额外头颅"
             ),
             1
         );
@@ -58,7 +66,7 @@ public class ExtraHeads extends JavaPlugin implements SlimefunAddon {
             new NamespacedKey(this, "decapitation"),
             new CustomItemStack(
                 Material.IRON_SWORD,
-                "&6Kill the specified Mob"
+                "&6击杀指定生物"
             )
         );
 
@@ -141,7 +149,7 @@ public class ExtraHeads extends JavaPlugin implements SlimefunAddon {
             SlimefunItemStack item = new SlimefunItemStack(
                 type + "_HEAD",
                 texture,
-                "&f" + ChatUtils.humanize(type.toString()) + " Head"
+                "&f" + EntityTypeHelper.getName(type) + "头"
             );
             new MobHead(
                 itemGroup,
@@ -149,8 +157,8 @@ public class ExtraHeads extends JavaPlugin implements SlimefunAddon {
                 recipeType,
                 new CustomItemStack(
                     item,
-                    "&rKill 1 " + ChatUtils.humanize(type.name()),
-                    "&7Chance: &e" + chance + "%"
+                    "&r击杀" + EntityTypeHelper.getName(type),
+                    "&7几率：&e" + chance + "%"
                 )
             ).register(this, () -> mobs.put(type, item));
         } catch (Exception x) {
@@ -173,6 +181,6 @@ public class ExtraHeads extends JavaPlugin implements SlimefunAddon {
 
     @Override
     public String getBugTrackerURL() {
-        return "https://github.com/Slimefun-Addon-Community/ExtraHeads/issues";
+        return "https://github.com/SlimefunGuguProject/ExtraHeads/issues";
     }
 }

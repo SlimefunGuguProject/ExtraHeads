@@ -2,6 +2,8 @@ package io.github.thebusybiscuit.extraheads.setup;
 
 import java.util.logging.Level;
 
+import net.guizhanss.minecraft.guizhanlib.gugu.minecraft.helpers.entity.EntityTypeHelper;
+
 import org.bukkit.entity.EntityType;
 
 import io.github.thebusybiscuit.extraheads.ExtraHeads;
@@ -110,15 +112,15 @@ public class ItemSetup {
             SlimefunItemStack item = new SlimefunItemStack(
                 type + "_HEAD",
                 texture,
-                "&f" + ChatUtils.humanize(type.toString()) + " Head"
+                "&f" + EntityTypeHelper.getName(type) + "头"
             );
             new MobHead(
                 type,
                 item,
                 new CustomItemStack(
                     item,
-                    "&rKill 1 " + ChatUtils.humanize(type.name()),
-                    "&7Chance: &e" + chance + "%"
+                    "&r击杀" + EntityTypeHelper.getName(type),
+                    "&7几率：&e" + chance + "%"
                 )
             ).register(ExtraHeads.getInstance());
         } catch (Exception x) {

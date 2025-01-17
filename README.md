@@ -7,17 +7,7 @@ ExtraHeads 是一个 Slimefun4 附属插件。
 
 ## 下载 ExtraHeads
 
-你可以在这里下载ExtraHeads: [下载ExtraHeads](https://builds.guizhanss.net/ybw0014/ExtraHeads-CN/master)
-
-<p align="center">
-  <a href="https://github.com/ybw0014/ExtraHeads-CN/actions/workflows/maven.yml">
-    <img src="https://github.com/ybw0014/ExtraHeads-CN/actions/workflows/maven.yml/badge.svg" alt="Java CI"/>
-  </a>
-
-  <a href="https://builds.guizhanss.net/ybw0014/ExtraHeads-CN/master">
-    <img src="https://builds.guizhanss.net/f/ybw0014/ExtraHeads-CN/master/badge.svg" alt="Build status"/>
-  </a>
-</p>
+[![Build status](https://builds.guizhanss.com/api/badge/SlimefunGuguProject/ExtraHeads/master/latest)](https://builds.guizhanss.com/SlimefunGuguProject/ExtraHeads/master)
 
 ## Discord
 
@@ -31,4 +21,5 @@ ExtraHeads 是一个 Slimefun4 附属插件。
 </p>
 
 ## 开源
+
 本项目以[MIT协议](/LICENSE)开源。

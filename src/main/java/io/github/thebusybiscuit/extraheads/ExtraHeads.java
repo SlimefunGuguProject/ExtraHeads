@@ -1,8 +1,8 @@
 package io.github.thebusybiscuit.extraheads;
 
-import javax.annotation.Nonnull;
+import java.util.logging.Level;
 
-import net.guizhanss.guizhanlibplugin.updater.GuizhanUpdater;
+import javax.annotation.Nonnull;
 
 import org.bstats.bukkit.Metrics;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -13,7 +13,7 @@ import io.github.thebusybiscuit.extraheads.setup.Registry;
 import io.github.thebusybiscuit.slimefun4.api.SlimefunAddon;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.config.Config;
 
-import net.guizhanss.guizhanlibplugin.updater.GuizhanUpdater;
+import net.guizhanss.minecraft.guizhanlib.updater.GuizhanUpdater;
 
 import lombok.Getter;
 

@@ -8,17 +8,16 @@ plugins {
 
 repositories {
     mavenCentral()
-    maven("https://s01.oss.sonatype.org/content/groups/public/")
     maven("https://repo.papermc.io/repository/maven-public/")
     maven("https://jitpack.io")
     maven("https://repo.extendedclip.com/content/repositories/placeholderapi/")
 }
 
 dependencies {
-    compileOnly("io.papermc.paper:paper-api:1.21.4-R0.1-SNAPSHOT")
-    compileOnly("com.github.Slimefun:Slimefun4:a1a2abbc47")
+    compileOnly("io.papermc.paper:paper-api:1.21.7-R0.1-SNAPSHOT")
+    compileOnly("com.github.SlimefunGuguProject:Slimefun4:2025.1")
     compileOnly("me.clip:placeholderapi:2.11.6")
-    compileOnly("net.guizhanss:GuizhanLibPlugin:2.2.0")
+    compileOnly("net.guizhanss:GuizhanLibPlugin:2.3.0")
     implementation("org.bstats:bstats-bukkit:3.1.0")
     implementation("com.google.code.findbugs:jsr305:3.0.2")
 }

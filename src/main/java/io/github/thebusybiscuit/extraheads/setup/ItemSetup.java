@@ -2,18 +2,16 @@ package io.github.thebusybiscuit.extraheads.setup;
 
 import java.util.logging.Level;
 
-import net.guizhanss.minecraft.guizhanlib.gugu.minecraft.helpers.entity.EntityTypeHelper;
-
 import org.bukkit.entity.EntityType;
 
 import io.github.thebusybiscuit.extraheads.ExtraHeads;
 import io.github.thebusybiscuit.extraheads.items.MobHead;
 import io.github.thebusybiscuit.slimefun4.api.items.SlimefunItemStack;
 import io.github.thebusybiscuit.slimefun4.libraries.dough.items.CustomItemStack;
-import io.github.thebusybiscuit.slimefun4.utils.ChatUtils;
 
 import net.guizhanss.guizhanlib.minecraft.utils.MinecraftVersionUtil;
 import net.guizhanss.guizhanlib.minecraft.utils.compatibility.EntityTypeX;
+import net.guizhanss.minecraft.guizhanlib.gugu.minecraft.helpers.entity.EntityTypeHelper;
 
 import lombok.experimental.UtilityClass;
 
@@ -101,6 +99,11 @@ public class ItemSetup {
         if (MinecraftVersionUtil.isAtLeast(21, 4)) {
             // https://minecraft-heads.com/custom-heads/head/111644-creaking
             registerHead(EntityType.CREAKING, "3630e03391db6c0e9c8643a59754c2d19a1f938a787150af3b3d516ba8094cda");
+        }
+
+        if (MinecraftVersionUtil.isAtLeast(21, 6)) {
+            // https://minecraft-heads.com/custom-heads/head/117418-happy-ghast
+            registerHead(EntityType.HAPPY_GHAST, "a1a36cb93d01675c4622dd5c8d872110911ec12c372e89afa8ba03862867f6fb");
         }
 
         ExtraHeads.getRegistry().getConfig().save();

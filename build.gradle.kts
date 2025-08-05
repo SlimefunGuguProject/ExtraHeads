@@ -2,8 +2,9 @@ plugins {
     id("java")
     id("maven-publish")
     id("io.freefair.lombok") version "8.7.1"
-    id("com.gradleup.shadow") version "8.3.0"
-    id("net.minecrell.plugin-yml.bukkit") version "0.6.0"
+    id("com.gradleup.shadow") version "8.3.6"
+    id("de.eldoria.plugin-yml.bukkit") version "0.7.1"
+    id("xyz.jpenilla.run-paper") version "2.3.1"
 }
 
 repositories {
@@ -55,4 +56,21 @@ bukkit {
     website = "https://github.com/SlimefunGuguProject/ExtraHeads"
     depend = listOf("Slimefun")
     softDepend = listOf("PlaceholderAPI", "GuizhanLibPlugin")
+}
+
+tasks {
+    runServer {
+        downloadPlugins {
+            // Slimefun
+            url("https://builds.guizhanss.com/api/download/SlimefunGuguProject/Slimefun4/master/218")
+            // GuizhanLibPlugin
+            url("https://builds.guizhanss.com/api/download/ybw0014/GuizhanLibPlugin/master/latest")
+            // SlimeHUD
+            url("https://builds.guizhanss.com/api/download/SlimefunGuguProject/SlimeHUD/master/latest")
+            // GuizhanCraft for testing convenient
+            url("https://builds.guizhanss.com/api/download/ybw0014/GuizhanCraft/master/latest")
+        }
+        jvmArgs("-Dcom.mojang.eula.agree=true")
+        minecraftVersion("1.21.6")
+    }
 }

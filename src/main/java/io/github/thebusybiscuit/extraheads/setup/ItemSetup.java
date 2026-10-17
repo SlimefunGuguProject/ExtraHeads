@@ -2,8 +2,6 @@ package io.github.thebusybiscuit.extraheads.setup;
 
 import java.util.logging.Level;
 
-import io.github.thebusybiscuit.extraheads.utils.MinecraftVersionUtils;
-
 import org.bukkit.entity.EntityType;
 
 import io.github.thebusybiscuit.extraheads.ExtraHeads;
@@ -70,47 +68,91 @@ public class ItemSetup {
         registerHead(EntityType.GLOW_SQUID, "57327ee11812b764c7ade70b282cce4c58e635b2015244081d1490543da7280e");
         registerHead(EntityType.GOAT, "457a0d538fa08a7affe312903468861720f9fa34e86d44b89dcec5639265f03");
 
-        if (MinecraftVersionUtils.isAtLeast(1, 19)) {
+        if (MinecraftVersionUtil.isAtLeast(1, 19)) {
             // https://minecraft-heads.com/custom-heads/animals/61373-allay
             registerHead(EntityType.ALLAY, "df5de940bfe499c59ee8dac9f9c3919e7535eff3a9acb16f4842bf290f4c679f");
             // https://minecraft-heads.com/custom-heads/animals/63169-cold-frog
             registerHead(EntityType.FROG, "45852a95928897746012988fbd5dbaa1b70b7a5fb65157016f4ff3f245374c08");
             // https://minecraft-heads.com/custom-heads/animals/51348-tadpole
             registerHead(EntityType.TADPOLE, "987035f5352334c2cba6ac4c65c2b9059739d6d0e839c1dd98d75d2e77957847");
+            // https://minecraft-heads.com/custom-heads/head/18427-endermite
+            registerHead(EntityType.ENDERMITE, "5bc7b9d36fb92b6bf292be73d32c6c5b0ecc25b44323a541fae1f1e67e393a3e");
+            // https://minecraft-heads.com/custom-heads/head/34783-hoglin
+            registerHead(EntityType.HOGLIN, "9bb9bc0f01dbd762a08d9e77c08069ed7c95364aa30ca1072208561b730e8d75");
+            // https://minecraft-heads.com/custom-heads/head/17931-phantom
+            registerHead(EntityType.PHANTOM, "746830da5f83a3aaed838a99156ad781a789cfcf13e25beef7f54a86e4fa4");
+            // https://minecraft-heads.com/custom-heads/head/38372-piglin-brute
+            registerHead(EntityType.PIGLIN_BRUTE, "3e300e9027349c4907497438bac29e3a4c87a848c50b34c21242727b57f4e1cf");
+            // https://minecraft-heads.com/custom-heads/head/106998-silverfish
+            registerHead(EntityType.SILVERFISH, "bfe13237e1109cab7264dc53b0aa697cf9a7c62c984a269fb0755a288912bbca");
+            // https://minecraft-heads.com/custom-heads/head/100620-warden
+            registerHead(EntityType.WARDEN, "b84d5a30166509864fb1774c72fd9df338fc5c599c84e6e8fe223ba6b17291cd");
+            // https://minecraft-heads.com/custom-heads/head/35932-zoglin
+            registerHead(EntityType.ZOGLIN, "e67e18602e03035ad68967ce090235d8996663fb9ea47578d3a7ebbc42a5ccf9");
+            // https://minecraft-heads.com/custom-heads/head/128170-bee
+            registerHead(EntityType.BEE, "9c72c132073ec5a058218d6fbfb4a9970652ced9214d53f4f614b3902fd99a7a");
+            // https://minecraft-heads.com/custom-heads/head/103253-orange-tabby-cat
+            registerHead(EntityType.CAT, "22d4a972b4cb28774ee5563d4e7b89e4855a228bebe23346ad1174066f0a07aa");
+            // https://minecraft-heads.com/custom-heads/head/17898-cod-fish
+            registerHead(EntityType.COD, "7892d7dd6aadf35f86da27fb63da4edda211df96d2829f691462a4fb1cab0");
+            // https://minecraft-heads.com/custom-heads/head/125655-donkey
+            registerHead(EntityType.DONKEY, "f57ceea4e2a7bc996f0708f1af949f78dcd9cf3ea6b6f123347ddfc3a2259bb5");
+            // https://minecraft-heads.com/custom-heads/head/25319-mule
+            registerHead(EntityType.MULE, "16272233c1eb1bf47baf5c6cf86f93d15af9708ad2ca18f6c90153499226885");
+            // https://minecraft-heads.com/custom-heads/head/121384-pufferfish
+            registerHead(EntityType.PUFFERFISH, "4e5bbb9f1b5dfe92f455bea48181b6f23f56dd2a7de022c780c55aa51b61638c");
+            // https://minecraft-heads.com/custom-heads/head/17714-salmon
+            registerHead(EntityType.SALMON, "afbdf10317a7a6315c3cbaf7edc590f0d97714bd699c8615a24f72bb8a9bc");
+            // https://minecraft-heads.com/custom-heads/head/105331-skeleton-horse
+            registerHead(EntityType.SKELETON_HORSE, "ac7d8a16d3f0f98b598df93f2c2d34e75171cd52dbf4a1211d7b84c019416a40");
+            // https://minecraft-heads.com/custom-heads/head/109991-snow-golem
+            registerHead(EntityType.SNOW_GOLEM, "e6f20aec528c3968dd8164f9d9336b081b3a2c7ecf189cf73df6f925e5a4ed14");
+            // https://minecraft-heads.com/custom-heads/head/113925-trader-llama-grayed
+            registerHead(EntityType.TRADER_LLAMA, "b1c54365d1ceac0da4a86b09067a17a4fd849eac422c79992642157996430289");
+            // https://minecraft-heads.com/custom-heads/head/107004-tropical-fish-grayed
+            registerHead(EntityType.TROPICAL_FISH, "5ac3bd91eab2d5a3980b75ddb93f77970dba8fbb45a862ae5e77c10cf5e7e5e1");
+            // https://minecraft-heads.com/custom-heads/head/127233-wolf
+            registerHead(EntityType.WOLF, "fd117e055b9d2c298d215802fbeabe5cc9cbdabef0bf73f18c7cc2b4bec8a898");
         }
 
-        if (MinecraftVersionUtils.isAtLeast(1, 20)) {
+        if (MinecraftVersionUtil.isAtLeast(1, 20)) {
             // https://minecraft-heads.com/custom-heads/animals/62878-camel
             registerHead(EntityType.CAMEL, "3642c9f71131b5df4a8c21c8c6f10684f22abafb8cd68a1d55ac4bf263a53a31");
             // https://minecraft-heads.com/custom-heads/animals/64113-sniffer
             registerHead(EntityType.SNIFFER, "fe5a8341c478a134302981e6a7758ea4ecfd8d62a0df4067897e75502f9b25de");
         }
 
-        if (MinecraftVersionUtils.isAtLeast(1, 20, 5)) {
+        if (MinecraftVersionUtil.isAtLeast(1, 20, 5)) {
             // https://minecraft-heads.com/custom-heads/head/91910-armadillo
             registerHead(EntityType.ARMADILLO, "9852b33ba294f560090752d113fe728cbc7dd042029a38d5382d65a2146068b7");
         }
 
-        if (MinecraftVersionUtils.isAtLeast(1, 21)) {
+        if (MinecraftVersionUtil.isAtLeast(1, 21)) {
             // https://minecraft-heads.com/custom-heads/head/87691-bogged
             registerHead(EntityType.BOGGED, "a3b9003ba2d05562c75119b8a62185c67130e9282f7acbac4bc2824c21eb95d9");
             // https://minecraft-heads.com/custom-heads/head/69108-breeze
             registerHead(EntityType.BREEZE, "a275728af7e6a29c88125b675a39d88ae9919bb61fdc200337fed6ab0c49d65c");
         }
 
-        if (MinecraftVersionUtils.isAtLeast(1, 21, 4)) {
+        if (MinecraftVersionUtil.isAtLeast(1, 21, 4)) {
             // https://minecraft-heads.com/custom-heads/head/111644-creaking
             registerHead(EntityType.CREAKING, "3630e03391db6c0e9c8643a59754c2d19a1f938a787150af3b3d516ba8094cda");
         }
 
-        if (MinecraftVersionUtils.isAtLeast(1, 21, 6)) {
+        if (MinecraftVersionUtil.isAtLeast(1, 21, 6)) {
             // https://minecraft-heads.com/custom-heads/head/117418-happy-ghast
             registerHead(EntityType.HAPPY_GHAST, "a1a36cb93d01675c4622dd5c8d872110911ec12c372e89afa8ba03862867f6fb");
         }
 
-        if (MinecraftVersionUtils.isAtLeast(1, 21, 11)) {
-            // https://minecraft-heads.com/custom-heads/head/123519-camel-husk
-            registerHead(EntityType.CAMEL_HUSK, "3bd7a92a6f67b7500d16c4e12f28058ec2859311556ba03be2d1f581170f2db6");
+        if (MinecraftVersionUtil.isAtLeast(1, 21, 9)) {
+            // copper golem hash from RebarMobs (PlayerHead.kt), see minecraft-heads.com/custom-heads/head/122446-copper-golem
+            registerHead(EntityType.COPPER_GOLEM, "ef4fcdff157a36d32061cb7dd0b69f7f7885fd3ddf99de471b67a84cc8677cb3");
+        }
+
+        if (MinecraftVersionUtil.isAtLeast(1, 21, 11)) {
+            // https://minecraft-heads.com/custom-heads/head/123542-camel-husk
+            // hash fixed per RebarMobs commit 746f48e
+            registerHead(EntityType.CAMEL_HUSK, "750bfc9b2cc40f4d8d0224ccbabac26b338aa947d99dcde769f859b59b8d0b0e");
             // https://minecraft-heads.com/custom-heads/head/123259-nautilus
             registerHead(EntityType.NAUTILUS, "3bb340dd3302615348de5162fe1670b9c5c9c616cd92d2de9d8398cb33e842ae");
             // https://minecraft-heads.com/custom-heads/head/123518-parched
@@ -120,6 +162,11 @@ public class ItemSetup {
             // https://minecraft-heads.com/custom-heads/head/89401-zombie-horse
             registerHead(EntityType.ZOMBIE_HORSE, "ce62ef83bc7ddc9b86a6a1a916d1ddb802f4d14fd75be8cac6d69c7b6e1cf97");
 
+        }
+
+        if (MinecraftVersionUtil.isAtLeast(26, 2)) {
+            // https://minecraft-heads.com/custom-heads/head/128259-sulfur-cube
+            registerHead(EntityType.SULFUR_CUBE, "205ec0241f084e1776a201f6df8c124c8637671fd85e0af5e77090f4e9c38602");
         }
 
         ExtraHeads.getRegistry().getConfig().save();

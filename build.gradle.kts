@@ -1,10 +1,10 @@
 plugins {
     id("java")
     id("maven-publish")
-    id("io.freefair.lombok") version "8.7.1"
-    id("com.gradleup.shadow") version "8.3.6"
-    id("de.eldoria.plugin-yml.bukkit") version "0.7.1"
-    id("xyz.jpenilla.run-paper") version "2.3.1"
+    id("io.freefair.lombok") version "9.8.2"
+    id("com.gradleup.shadow") version "9.6.1"
+    id("de.eldoria.plugin-yml.bukkit") version "0.9.0"
+    id("xyz.jpenilla.run-paper") version "3.1.0"
 }
 
 repositories {
@@ -15,10 +15,10 @@ repositories {
 }
 
 dependencies {
-    compileOnly("io.papermc.paper:paper-api:1.21.11-R0.1-SNAPSHOT")
+    compileOnly("io.papermc.paper:paper-api:26.2.build.134-stable")
     compileOnly("com.github.SlimefunGuguProject:Slimefun4:2025.1")
     compileOnly("me.clip:placeholderapi:2.11.6")
-    compileOnly("net.guizhanss:GuizhanLibPlugin:2.3.0")
+    compileOnly("net.guizhanss:GuizhanLibPlugin:2.5.0")
     implementation("org.bstats:bstats-bukkit:3.1.0")
     implementation("com.google.code.findbugs:jsr305:3.0.2")
 }
@@ -28,7 +28,13 @@ version = "UNOFFICIAL"
 
 java {
     disableAutoTargetJvm()
+
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(25)
+    }
+
     sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
 }
 
 publishing {
@@ -72,6 +78,6 @@ tasks {
             url("https://builds.guizhanss.com/api/download/ybw0014/GuizhanCraft/master/latest?t=${t}")
         }
         jvmArgs("-Dcom.mojang.eula.agree=true")
-        minecraftVersion("1.21.11")
+        minecraftVersion("26.2")
     }
 }

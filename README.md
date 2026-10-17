@@ -7,7 +7,7 @@ ExtraHeads 是一个 Slimefun4 附属插件。
 
 ## 下载 ExtraHeads
 
-[![Build status](https://builds.guizhanss.com/api/badge/SlimefunGuguProject/ExtraHeads/master/latest)](https://builds.guizhanss.com/SlimefunGuguProject/ExtraHeads/master)
+[点击此处下载](https://resources.guizhanss.com/plugin/ExtraHeads#download)
 
 ## Discord
 
